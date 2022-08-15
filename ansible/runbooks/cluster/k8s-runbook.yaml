@@ -7,14 +7,6 @@
   tasks:
     - import_tasks: login.yaml
 
-- name: Login for virtualbox
-  hosts: virtualbox_nodes  
-  vars_files:
-  - vars.yml
-  gather_facts: false
-  tasks:
-    - import_tasks: virtualbox-login.yaml
-
 - name: Prep
   hosts: all
   vars_files:
